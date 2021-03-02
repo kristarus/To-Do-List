@@ -121,7 +121,7 @@ body {
 
 .deskProgress_style {
   background-color: rgb(68, 22, 82);
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 20px 20px;
 }
 
 .deskProgress__header_margin {
@@ -139,7 +139,7 @@ body {
 
 .deskDone_style {
   background-color: rgb(68, 22, 82);
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 20px 20px;
 }
 
 .deskDone__header_margin {
@@ -157,7 +157,7 @@ body {
 
 .deskDeleted_style {
   background-color: rgb(68, 22, 82);
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 20px 20px;
 }
 
 .deskDeleted__header_margin {

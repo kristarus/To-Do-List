@@ -30,18 +30,22 @@ btnSubmit.addEventListener("click", (event) => {
   drawTaskProgress();
   form = event.target.closest("#toDoForm");
   form.reset();
+  findEmptyDesks();
 });
 
 deskProgress.addEventListener("click", (event) => {
   findEventProgress(event);
+  findEmptyDesks();
 });
 
 deskDeleted.addEventListener("click", (event) => {
   findEventDeleted(event);
+  findEmptyDesks();
 });
 
 deskDone.addEventListener("click", (event) => {
   findEventDone(event);
+  findEmptyDesks();
 });
 
 //=====================FUNCTIONS==========================
@@ -261,5 +265,26 @@ function findEventDone(event) {
     openModal();
     taskToEdit = event.target.closest(".task");
     deskToEdit = deskDone;
+  }
+}
+
+function findEmptyDesks() {
+  const deskProgress_style = document.querySelector(".deskProgress_style");
+  const deskDeleted_style = document.querySelector(".deskDeleted_style");
+  const deskDone_style = document.querySelector(".deskDone_style");
+  if (arrayProgress.length === 0) {
+    deskProgress_style.style.borderRadius = "20px 20px 20px 20px";
+  } else {
+    deskProgress_style.style.borderRadius = "20px 20px 0 0";
+  }
+  if (arrayDeleted.length === 0) {
+    deskDeleted_style.style.borderRadius = "20px 20px 20px 20px";
+  } else {
+    deskDeleted_style.style.borderRadius = "20px 20px 0 0";
+  }
+  if (arrayDone.length === 0) {
+    deskDone_style.style.borderRadius = "20px 20px 20px 20px";
+  } else {
+    deskDone_style.style.borderRadius = "20px 20px 0 0";
   }
 }
